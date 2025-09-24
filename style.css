@@ -1,27 +1,87 @@
-body {
+/* ----------------- General ----------------- */
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #111;
-  color: #fff;
+  padding: 0;
+}
+
+body {
   font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(160deg, #111 0%, #000 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ----------------- Game Container ----------------- */
+.game-container {
+  width: 95%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* ----------------- Header ----------------- */
+header {
   text-align: center;
+  margin-bottom: 10px;
 }
 
-h1 {
-  margin: 20px 0;
+header h1 {
+  font-size: 2rem;
   color: #50aaff;
-  text-shadow: 0 0 5px #0cc, 0 0 10px #50aaff;
-}
-
-#gameCanvas {
-  display: block;
-  margin: 0 auto;
-  background: radial-gradient(#000,#111);
-  border: 3px solid #50aaff;
-  box-shadow: 0 0 20px #50aaff;
+  text-shadow: 0 0 5px #0cc, 0 0 15px #50aaff;
+  margin-bottom: 5px;
 }
 
 #scoreBoard {
-  margin-top: 10px;
-  font-size: 22px;
+  font-size: 1.1rem;
   color: #0cc;
+  text-shadow: 0 0 3px #0cc;
+}
+
+/* ----------------- Canvas ----------------- */
+#gameCanvas {
+  width: 100%;
+  max-width: 800px;
+  height: 60vh;
+  background: radial-gradient(circle, #111, #000);
+  border: 4px solid #50aaff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #50aaff, 0 0 40px #0cc inset;
+  touch-action: none; /* prevent scrolling on mobile */
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ----------------- Footer ----------------- */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #0cc;
+  text-shadow: 0 0 3px #0cc;
+  margin-top: 5px;
+}
+
+/* ----------------- Powerup Icons ----------------- */
+.powerup {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ----------------- Responsive ----------------- */
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  #scoreBoard {
+    font-size: 0.9rem;
+  }
+  #gameCanvas {
+    height: 50vh;
+  }
 }
