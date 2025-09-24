@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #50aaff;
+  text-shadow: 0 0 5px #0cc, 0 0 10px #50aaff;
+}
+
+#gameCanvas {
+  display: block;
+  margin: 0 auto;
+  background: radial-gradient(#000,#111);
+  border: 3px solid #50aaff;
+  box-shadow: 0 0 20px #50aaff;
+}
+
+#scoreBoard {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #0cc;
+}
